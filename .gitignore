@@ -1,0 +1,9 @@
+# Material bruto das reuniões — fica fora do repositório (tamanho e privacidade)
+audios/
+transcricoes/
+documentos/
+AGRO_trechos_reunioes.md
+.env
+bin/
+frontend/node_modules/
+frontend/dist/

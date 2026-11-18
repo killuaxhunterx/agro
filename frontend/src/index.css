@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* Plus Jakarta Sans, self-hosted — a mesma família do CSF. Fonte variável: um arquivo para
+   todos os pesos normais e um para os itálicos. */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fonts/plus-jakarta-sans-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: italic;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fonts/plus-jakarta-sans-latin-italic.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Identidade provisória — a definitiva depende da logo e da paleta que a Ana vai mandar.
+   Marsala é a voz da marca (títulos, ação principal), como pede a apresentação; o verde-campo
+   é o apoio e nunca vira estado de erro. Cor nunca carrega significado sozinha. */
+@theme {
+  --color-brand: #6f2232;
+  --color-brand-deep: #561a27;
+  --color-brand-soft: #f6e9ea;
+  --color-brand-rail: #e7c9cd;
+  --color-field-green: #4f7a28;
+  --color-field-green-deep: #3d5f1f;
+  --color-field-green-soft: #eef4e4;
+  --color-field-green-light: #a8c66c;
+  --color-wheat: #c98a1b;
+  --color-wheat-soft: #fbf1dc;
+
+  --color-text: #1f2421;
+  --color-muted: #5b6158;
+  --color-danger: #b42318;
+  --color-danger-soft: #fef3f2;
+
+  --color-bg: #f7f3ec;
+  --color-surface: #ffffff;
+  --color-border: #e6e0d6;
+  --color-border-strong: #cfc6b8;
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --radius-card: 16px;
+  --radius-field: 12px;
+  --shadow-card: 0 10px 30px rgb(31 36 33 / 0.06);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
